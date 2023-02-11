@@ -1,0 +1,31 @@
+--Create table of cars i was considering buying 
+
+create table cars (id INTEGER PRIMARY KEY, Year  Integer, Name TEXT, Price INTEGER, Miliaege INTEGER);
+
+INSERT INTO cars VALUES (1, 2003, "Honda s2k", 20000, "100,000");
+INSErt INTO cars VALUES (2, 2012, "Subaru WRX", 21000, "51k");
+INSERT INTO cars VALUES (3, 2013, "Ford focus ST", 17000, "43");
+INSERT INTO cars VALues (4, 2014, "Mitbuishi Lancer Ralliart", 16000, "46k");
+INSERT INTO cars VALUES (5, 2008, "BMW 128i", 9000, "45k");
+insert into cars values (6, 2012, "Mitbushi Lancer EVO", 30000, "40k");
+Insert Into Cars Values (7, 2004, "Toyota Tocama", 11000, "60k");
+Insert Into cars values (8, 2013,  "Mazda Mazda3speed", 21000 ,"50k");
+Insert Into cars values (9, 2013,  "Ford Focus ST", 20000, "50k");
+Insert into cars values (10, 2003, "Toyota MRS Spyder", 14500, "42k");
+insert into cars values (11, 2002, "Ford Mustang gt", 8490, "71k");
+Insert into cars values (12, 2011,  "BMW 328i", 19000, "36k");
+Insert into cars values (13, 2004, "Volvo S60R Turbo", 15000, "67k");
+Insert into cars values (14, 2005, "Volvo c70 t5",13000, 65000);
+Insert into cars values (15, 2001, "Audi a6 2.7t", 9900, "77k");
+
+--view table
+select * from cars order by id;
+
+--view of table by highest price 
+SELECT * FROM cars Order by Price desc;
+
+--view of cars newer then 2005
+Select * from cars Where year > 2005 order by year asc;
+
+--total cost if i bought every car
+select sum(Price) as Total_if_bought_all_cars from cars;
