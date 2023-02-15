@@ -1,7 +1,4 @@
-/* Put your data in here and query it! */
-/* Source:
-  https://www.kaggle.com/nasa/astronaut-yearbook
-*/
+--creating table
 CREATE TABLE astronauts(
    Name                TEXT PRIMARY KEY,
    Year                INTEGER,
@@ -382,12 +379,16 @@ INSERT INTO astronauts(Name,Year,GroupNum,Status,Birth_Date,Birth_Place,Gender,A
 INSERT INTO astronauts(Name,Year,GroupNum,Status,Birth_Date,Birth_Place,Gender,Alma_Mater,Undergraduate_Major,Graduate_Major,Military_Rank,Military_Branch,Space_Flights,Space_Flight_hr,Space_Walks,Space_Walks_hr,Missions,Death_Date,Death_Mission) VALUES ('George D. Zamka',1998,17,'Retired','6/29/1962','Jersey City, NJ','Male','US Naval Academy; Florida Institute of Technology','Mathematics','Engineering Management','Colonel','US Marine Corps (Retired)',2,692,0,0,'STS-120 (Discovery), STS-130 (Endeavor)',NULL,NULL);
 SELECT * FROM astronauts;
 
+--avg
 select avg(space_walks_hr) as Avg_Hours_walked from astronauts;
 
+--min
 Select  min(space_walks_hr) as Least_Hours_walked from astronauts;
 
+--max
 Select  max(space_walks_hr) as Most_Hours_walked from astronauts;
 
+-active
 select name, status from astronauts 
 group by name
 having status = "Active";
