@@ -1,0 +1,23 @@
+--table of famous people 
+create table Famous_people (Id INTEGER primary key,Name text,Age INTEGER,Born text, Occupation integer);
+insert into Famous_people values (1,"Morgan Wallen",29,"Tennessee",1);
+Insert into Famous_people values (2,"ernest","unkown","Tennessee",1);
+Insert into Famous_people values (3,"Luke combs",32, "North carolina",1);
+Insert into Famous_people values (4, "Keanu Reeves", 57, "Beirut,Lebanon",2);
+Insert into Famous_people values (5, "Morgan Freeman", 85, "Tennesse",2); 
+
+Create table Occupation (Id Integer primary key , Carrer text);
+
+Insert into Occupation values (1,"Musican");
+Insert into Occupation values (2,"Actor");
+SELECT * FROM Occupation;
+
+Select Famous_people.Name ,Occupation.carrer
+from Occupation
+join Famous_people 
+on Occupation.id = Famous_people. occupation;
+
+SELECT * FROM Famous_people;
+select * from Famous_people where Born = "Tennessee";
+
+Select * from famous_people where age > 30
