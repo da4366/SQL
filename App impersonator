@@ -1,0 +1,16 @@
+-- Im updating a table 
+
+Create table Clash_of_Clans (Battle integer, Win_Loss text, stars integer, gold integer, elixir integer);
+
+insert into Clash_of_Clans values (1, "yes" ,3, 1000000, 1000000);
+insert into Clash_of_Clans values (2, "yes", 1, 580000, 650000);
+insert into Clash_of_Clans values (3, "no", 0, 450000, 380000);
+SELECT * FROM Clash_of_Clans;
+
+--Udating data 
+update Clash_of_Clans set gold=430000 where battle=3;
+SELECT * FROM Clash_of_Clans;
+
+--Deleting a row
+Delete from Clash_of_CLans where battle =3;
+SELECT * FROM Clash_of_Clans;
